@@ -1,0 +1,200 @@
+html, body, ul, ol, li, h1, h2, p { margin: 0; padding: 0; border: 0; }
+ul, li { display: block; list-style: none; }
+
+input, button { font: inherit; }
+
+body { 
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: black;
+  background: #f1f2f4;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  padding: 10px 0;
+  margin: 0 auto;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+header::before {
+  content: " ";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: 0;
+  margin: 0;
+  background: #333;
+  box-shadow: 0 0 3px black;
+}
+
+h1 {
+  position: relative;
+  font-size: 24px;
+  line-height: 30px;
+}
+header > h1, header > span {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+}
+
+button, .button {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 5px 25px;
+  margin: 0;
+  border: 0 none;
+  font: inherit;
+  background: #26c;
+  color: white;
+  cursor: default;
+  outline: none;
+  box-shadow: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+button:hover, .button:hover {
+  background: #25b;
+}
+button:active, .button:active {
+  padding: 6px 24px 4px 26px;
+}
+button:focus, .button-focus,
+.chose-file-input:focus + .chose-file-button,
+.chose-file-label:focus-within > .chose-file-button {
+  text-decoration: underline;
+}
+button[disabled], .button[disabled] {
+  filter: grayscale(1);
+  padding: 5px 25px;
+  text-decoration: none;
+}
+
+.main-area-step1 > #step2,
+.main-area-step2 > #step1 {
+  display: none;
+}
+
+.main-panel {
+  width: 960px;
+  margin: 20px auto 0;
+  display: flex;
+  align-items: stretch;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+
+.main-panel-left, .main-panel-right {
+  flex: 0 0 50%;
+  border: 1px solid #333;
+  width: 50%;
+}
+.main-panel-left {
+  order: 1;
+}
+.main-panel-right {
+  border-left: 0;
+  order: 2;
+}
+
+.detail-rows { display: block; }
+.detail-row { display: block; margin: 5px 0; }
+.detail-row > label { display: block; }
+.detail-row > .browser-style { display: block; padding-left: 40px; }
+
+.config-panel {
+  padding: 20px;
+  margin: -10px 0;
+}
+
+.config-panel input[type="text"],
+.config-panel input[type="number"] {
+  background: none transparent;
+  border: 1px solid #333;
+  padding: 1px 1px 1px 6px;
+}
+
+.config-panel input[type="text"]:hover,
+.config-panel input[type="number"]:hover {
+  border-color: #068;
+}
+
+.config-panel input[type="number"] {
+  width: 80px;
+}
+
+.config-panel input[type="number"] {
+  width: 80px;
+}
+
+.button-line {
+  padding: 20px;
+}
+.step1-panel-right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.step1-panel-right-item {
+  flex: 0 0 auto;
+}
+
+.button-right-line {
+  text-align: right;
+}
+
+.chose-file-input {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+  top: -960px;
+}
+
+.panel-pending-list {
+  flex: 1 1 auto;
+  border: 1px solid #333;
+  border-width: 1px 0;
+}
+
+.pending-list {
+  display: block;
+  width: 480px;
+  height: 100%;
+}
+
+.pending-item, .result-item {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  border-bottom: 1px solid #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.result-panel {
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid #333;
+}
+
+.result-link {
+  color: #37c;
+  font-weight: bold;
+  text-decoration: none;
+}
+.result-link:hover {
+  text-decoration: underline;
+}

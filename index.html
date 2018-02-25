@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>ASS Danmaku Convert Online</title>
+  <link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>
+      <span data-i18n="pageTitle">ASS Danmaku Convert Online</span>
+    </h1>
+    <span data-i18n="description">Convert danmaku (video comment) files to ASS format.</span>
+  </header>
+
+  <div class="main-area main-area-step1">
+    <div id="step1" class="main-panel">
+      <div class="main-panel-right">
+        <div class=" step1-panel-right">
+          <div class="button-line step1-panel-right-item">
+            <label class="chose-file-label">
+              <input id="chose_file" type="file" class="chose-file-input" aria-hidden="true" multiple />
+              <div role="button" class="button chose-file-button">
+                <span data-i18n="choseFileButton">Select Files</span>
+              </div>
+            </label>
+          </div>
+          <div class="step1-panel-right-item panel-pending-list scroll">
+            <ul class="pending-list">
+              <template id="file_item">
+                <li class="pending-item">
+                  <span class="item-title"></span>
+                </li>
+              </template>
+            </ul>
+          </div>
+          <div class="button-line step1-panel-right-item button-right-line">
+            <button id="convert_button" disabled>
+              <span data-i18n="startConvertButton">Convert</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="config_area" class="main-panel-left">
+        <div id="config_panel" class="config-panel"></div>
+      </div>
+    </div>
+
+    <div id="step2" class="main-panel">
+      <div class="result-panel">
+        <ul class="result-list">
+          <template id="result_item">
+            <li class="result-item"><span data-i18n="converting">Converting...</span></li>
+          </template>
+          <template id="result_item_link">
+            <a class="result-link"></a>
+          </template>
+        </ul>
+        <div class="button-line button-right-line">
+          <button id="finish_button">
+            <span data-i18n="restartButton">Start Over</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../ya-simple-scrollbar/ya-simple-scrollbar.js"></script>
+  <script src="./browser_stub.js"></script>
+  <script src="../ass-danmaku/extension/font/font.js"></script>
+  <script src="../ass-danmaku/extension/options/ext_options.js"></script>
+  <script src="../ass-danmaku/extension/danmaku/parser.js"></script>
+  <script src="../ass-danmaku/extension/danmaku/ass.js"></script>
+  <script src="../ass-danmaku/extension/danmaku/layout.js"></script>
+  <script src="../ass-danmaku/extension/download/download.js"></script>
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
