@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 if (/like gecko/i.test(navigator.userAgent)) {
-  window.font.text = window.font.textByDom();
+  window.font.text = window.font.textByCanvas();
 }
 
 
