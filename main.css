@@ -198,3 +198,7 @@ button[disabled], .button[disabled] {
 .result-link:hover {
   text-decoration: underline;
 }
+
+[data-i18n] {
+  visibility: hidden;
+}
