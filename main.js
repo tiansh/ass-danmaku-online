@@ -198,6 +198,7 @@ const listenEvents = function () {
 };
 
 const autoFillI18n = function () {
+  document.body.lang = language.replace(/_/, '-');
   if (language === 'en') return;
   const textCollection = i18nText[language];
   document.title = textCollection.pageTitle;

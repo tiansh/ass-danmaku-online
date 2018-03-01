@@ -199,6 +199,6 @@ button[disabled], .button[disabled] {
   text-decoration: underline;
 }
 
-[data-i18n] {
+body:not(:lang(en)) [data-i18n] {
   visibility: hidden;
 }
