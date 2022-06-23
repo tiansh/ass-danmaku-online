@@ -90,9 +90,13 @@ const gotDanmaku = function (danmakuItem) {
 const tryParse = function (content) {
   const parsers = [
     window.danmaku.parser.bilibili,
-    window.danmaku.parser.acfun,
+    window.danmaku.parser.bilibili_xml,
     window.danmaku.parser.niconico,
+    window.danmaku.parser.acfun,
     window.danmaku.parser.bahamut,
+    window.danmaku.parser.acfun_poll,
+    window.danmaku.parser.acfun_v4,
+    window.danmaku.parser.himawari,
   ];
   const danmaku = parsers.reduce((result, parser) => {
     let danmaku = [];
